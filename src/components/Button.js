@@ -7,7 +7,7 @@ const SIZES = ['btn--medium', 'btn--large'];
 export const Button = ({
     children, 
     type, 
-    onclick, 
+    onClick, 
     buttonStyle, 
     buttonSize
 }) => { 
@@ -16,10 +16,7 @@ export const Button = ({
 
     return(
         <Link to='/sign-up' className='btn-mobile'>
-            <button
-            className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-            onClick={onclick}
-            type={type}>
+            <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
                 {children}
             </button>
         </Link>
