@@ -14,7 +14,7 @@ export const Button = React.forwardRef((props, ref) => {
     let button;
     if(!isNullOrEmpty(props.link)) {
         button = (
-        <Link to={props.link} className='btn-mobile'>
+        <Link to={props.link}>
             <button ref={ref} className={buttonClass} onClick={props.onClick} type={props.type}>
                 {props.children}
             </button>
