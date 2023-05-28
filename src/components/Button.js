@@ -6,24 +6,16 @@ import { isNullOrEmpty } from '../Util';
 const STYLES = ['btn--primary', 'btn--outline'];
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const Button = ({
-    children, 
-    type, 
-    onClick, 
-    buttonStyle, 
-    buttonSize,
-    className
-}) => { 
-    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
-    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
+export const Button = React.forwardRef((props, ref) => { 
+    const checkButtonStyle = STYLES.includes(props.buttonStyle) ? props.buttonStyle : STYLES[0];
+    const checkButtonSize = SIZES.includes(props.buttonSize) ? props.buttonSize : SIZES[0];
 
-    let buttonClass = `btn ${checkButtonStyle} ${checkButtonSize} ${!isNullOrEmpty(className) ? className : ''}`;
+    let buttonClass = `btn ${checkButtonStyle} ${checkButtonSize} ${!isNullOrEmpty(props.className) ? props.className : ''}`;
 
     return(
-        <Link to='/sign-up' className='btn-mobile'>
-            <button className={buttonClass} onClick={onClick} type={type}>
-                {children}
-            </button>
-        </Link>
-    )
-};
+    <Link to='/sign-up' className='btn-mobile'>
+        <button ref={ref} className={buttonClass} onClick={props.onClick} type={props.type}>
+            {props.children}
+        </button>
+    </Link>);
+});
