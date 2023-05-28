@@ -11,11 +11,20 @@ export const Button = React.forwardRef((props, ref) => {
     const checkButtonSize = SIZES.includes(props.buttonSize) ? props.buttonSize : SIZES[0];
 
     let buttonClass = `btn ${checkButtonStyle} ${checkButtonSize} ${!isNullOrEmpty(props.className) ? props.className : ''}`;
-
-    return(
-    <Link to='/sign-up' className='btn-mobile'>
+    let button;
+    if(!isNullOrEmpty(props.link)) {
+        button = (
+        <Link to={props.link} className='btn-mobile'>
+            <button ref={ref} className={buttonClass} onClick={props.onClick} type={props.type}>
+                {props.children}
+            </button>
+        </Link>);
+    }
+    else {
+        button = (
         <button ref={ref} className={buttonClass} onClick={props.onClick} type={props.type}>
             {props.children}
-        </button>
-    </Link>);
+        </button>);
+    }
+    return button;
 });
