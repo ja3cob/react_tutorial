@@ -32,8 +32,10 @@ function Navbar() {
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     Witaj
                 </Link>
-                <div className='menu-icon' onClick={handleClick}>
-                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                <div className={click ? 'menu-icon active' : 'menu-icon'} onClick={handleClick}>
+                    <div className='hamburger-line line-1'/>
+                    <div className='hamburger-line line-2'/>
+                    <div className='hamburger-line line-3'/>
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>

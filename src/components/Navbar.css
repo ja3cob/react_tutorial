@@ -57,16 +57,33 @@
   transition: all 0.2s ease-out;
 }
 
-.fa-bars {
-  color: #fff;
-}
-
 .nav-links-mobile {
   display: none;
 }
 
 .menu-icon {
   display: none;
+}
+
+.hamburger-line {
+  background-color: white;
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s;
+}
+.hamburger-line.line-2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu-icon.active .line-1 {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-icon.active .line-2 {
+  opacity: 0;
+}
+.menu-icon.active .line-3 {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 @media screen and (max-width: 960px) {
@@ -105,17 +122,10 @@
 
   .menu-icon {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-  }
-
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
+    width: 25px;
+    height: fit-content;
   }
 
   .nav-links-mobile {
