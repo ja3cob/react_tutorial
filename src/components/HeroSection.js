@@ -8,7 +8,7 @@ function HeroSection() {
   const targetRef = useRef(null);
 
   useEffect(()=> {
-    const height = window.getComputedStyle(referenceRef.current).height;
+    const height = window.getComputedStyle(referenceRef.current).offsetHeight;
     const style = {
       height: height,
       width: height
@@ -21,13 +21,14 @@ function HeroSection() {
   return (
     <div className={video ? 'hero-container' : 'hero-container background-image'}>
         <video src='/videos/video-2.mp4' autoPlay loop muted />
+        <img className={video ? '' : 'img-show'} src='/images/img-home.jpg' alt='Background'/>
         <h1>DUPSKO</h1>
         <p>Spasione</p>
         <div className='hero-btns'>
           <Button buttonStyle='btn--outline' buttonSize='btn--large'>
             GET STARTED
           </Button>
-          <Button ref={referenceRef} className='srak' buttonStyle='btn--primary' buttonSize='btn--large'>
+          <Button ref={referenceRef} buttonStyle='btn--primary' buttonSize='btn--large'>
             WATCH TRAILER <i className='far fa-play-circle'/>
           </Button>
           <Button ref={targetRef} className='btn-toggle-video' buttonStyle={video ? 'btn--primary' : 'btn--outline'} buttonSize='btn--large' onClick={toggleVideo}>
