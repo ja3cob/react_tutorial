@@ -65,27 +65,6 @@
   display: none;
 }
 
-.hamburger-line {
-  background-color: white;
-  width: 100%;
-  height: 3px;
-  transition: all 0.3s;
-}
-.hamburger-line.line-2 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.menu-icon.active .line-1 {
-  transform: translateY(8px) rotate(45deg);
-}
-.menu-icon.active .line-2 {
-  opacity: 0;
-}
-.menu-icon.active .line-3 {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
 @media screen and (max-width: 960px) {
   .nav-menu {
     display: block;
@@ -122,10 +101,6 @@
 
   .menu-icon {
     display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
-    width: 25px;
-    height: fit-content;
   }
 
   .nav-links-mobile {

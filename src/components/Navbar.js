@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
+import Hamburger from './Hamburger';
 import './Navbar.css'
 
 function Navbar() {
@@ -32,11 +33,7 @@ function Navbar() {
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     Witaj
                 </Link>
-                <div className={click ? 'menu-icon active' : 'menu-icon'} onClick={handleClick}>
-                    <div className='hamburger-line line-1'/>
-                    <div className='hamburger-line line-2'/>
-                    <div className='hamburger-line line-3'/>
-                </div>
+                <Hamburger onClick={handleClick} className='menu-icon'/>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
