@@ -11,15 +11,15 @@ function HeroSection() {
     <div className='hero-container'>
         <video src='/videos/video-2.mp4' autoPlay loop muted />
         <img className={video ? 'background-img' : 'background-img show'} src='/images/img-home.jpg' alt='Background'/>
-        <h1>DUPSKO</h1>
-        <p>Spasione</p>
+        <h1>Podróże</h1>
+        <p>małe i duże</p>
         <div className='hero-btns'>
           <Button buttonStyle='btn--outline' buttonSize='btn--large'>
-            GET STARTED
+            ROZPOCZNIJ PRZYGODĘ
           </Button>
           <div className='video-btns'>
             <Button buttonStyle='btn--primary' buttonSize='btn--large'>
-              WATCH TRAILER <i className='far fa-play-circle'/>
+              OBEJRZYJ ZWIASTUN <i className='far fa-play-circle'/>
             </Button>
             <Button className='btn-toggle-video' buttonStyle={video ? 'btn--primary' : 'btn--outline'} buttonSize='btn--large' onClick={toggleVideo}>
             </Button>

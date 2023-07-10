@@ -5,39 +5,39 @@ import './Cards.css'
 function Cards() {
   return (
     <div className='cards'>
-        <h1>Check out epic destinations!</h1>
+        <h1>Zoba jakie super!</h1>
         <div className='cards__container'>
             <ul className='cards__items'>
                 <CardItem 
                     src='images/img-9.jpg'
-                    text='Explore the hidden waterfall' 
-                    label='Adventure' 
+                    text='Odwiedź tajemniczy wodospad' 
+                    label='Odwiedź' 
                     path='/services'
                 />
                 <CardItem 
                     src='images/img-8.jpg'
-                    text='Explore dunes' 
-                    label='Desert' 
-                    path='/services'
-                />
-            </ul>
-            <ul className='cards__items'>
-                <CardItem 
-                    src='images/img-2.jpg'
-                    text='Explore islands' 
-                    label='Islands' 
-                    path='/services'
-                />
-                <CardItem 
-                    src='images/img-3.jpg'
-                    text='Explore the ocean' 
-                    label='Ocean' 
+                    text='Odwiedź pustynię' 
+                    label='Odwiedź' 
                     path='/services'
                 />
                 <CardItem 
                     src='images/img-4.jpg'
-                    text='Explore football pitch' 
-                    label='Football' 
+                    text='Odwiedź boisko na wyspie' 
+                    label='Odwiedź' 
+                    path='/services'
+                />
+            </ul>
+            <ul className='cards__items'>
+            <CardItem 
+                    src='images/img-2.jpg'
+                    text='Ekspluruj wyspy' 
+                    label='Eksploruj' 
+                    path='/services'
+                />
+                <CardItem 
+                    src='images/img-3.jpg'
+                    text='Eksploruj ocean' 
+                    label='Eksploruj' 
                     path='/services'
                 />
             </ul>

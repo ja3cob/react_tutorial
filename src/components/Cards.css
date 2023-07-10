@@ -82,8 +82,8 @@
   }
   
   .cards__item__info {
-    padding: 20px;
-    margin: auto auto;
+    padding: 20px 0;
+    margin: auto;
   }
   
   .cards__item__text {
