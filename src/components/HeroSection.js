@@ -19,9 +19,9 @@ function HeroSection() {
   const toggleVideo = () => setVideo(prevState => !prevState);
 
   return (
-    <div className={video ? 'hero-container' : 'hero-container background-image'}>
+    <div className='hero-container'>
         <video src='/videos/video-2.mp4' autoPlay loop muted />
-        <img className={video ? '' : 'img-show'} src='/images/img-home.jpg' alt='Background'/>
+        <img className={video ? 'background-img' : 'background-img show'} src='/images/img-home.jpg' alt='Background'/>
         <h1>DUPSKO</h1>
         <p>Spasione</p>
         <div className='hero-btns'>
