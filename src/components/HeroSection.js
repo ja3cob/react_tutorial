@@ -1,20 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from './Button'
 import './HeroSection.css'
 
 function HeroSection() {
   const [video, setVideo] = useState(true);
-  const referenceRef = useRef(null);
-  const targetRef = useRef(null);
-
-  useEffect(()=> {
-    const height = window.getComputedStyle(referenceRef.current).offsetHeight;
-    const style = {
-      height: height,
-      width: height
-    };
-    Object.assign(targetRef.current.style, style);
-  }, []);
 
   const toggleVideo = () => setVideo(prevState => !prevState);
 
@@ -28,11 +17,13 @@ function HeroSection() {
           <Button buttonStyle='btn--outline' buttonSize='btn--large'>
             GET STARTED
           </Button>
-          <Button ref={referenceRef} buttonStyle='btn--primary' buttonSize='btn--large'>
-            WATCH TRAILER <i className='far fa-play-circle'/>
-          </Button>
-          <Button ref={targetRef} className='btn-toggle-video' buttonStyle={video ? 'btn--primary' : 'btn--outline'} buttonSize='btn--large' onClick={toggleVideo}>
-          </Button>
+          <div className='video-btns'>
+            <Button buttonStyle='btn--primary' buttonSize='btn--large'>
+              WATCH TRAILER <i className='far fa-play-circle'/>
+            </Button>
+            <Button className='btn-toggle-video' buttonStyle={video ? 'btn--primary' : 'btn--outline'} buttonSize='btn--large' onClick={toggleVideo}>
+            </Button>
+          </div>
         </div>
     </div>
   )
