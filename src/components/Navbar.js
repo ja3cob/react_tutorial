@@ -33,7 +33,7 @@ function Navbar() {
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     Witaj
                 </Link>
-                <Hamburger onClick={handleClick} className='menu-icon'/>
+                <Hamburger onClick={handleClick} active={click} className='menu-icon'/>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
@@ -56,7 +56,7 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline' className='btn-signup'>Rejestracja</Button>}
+                {button && <Link to='/sign-up'><Button buttonStyle='btn--outline' className='btn-signup'>Rejestracja</Button></Link>}
             </div>
         </nav>
         </>
